@@ -173,6 +173,7 @@ form {
     margin: 5vh 0 2vh 0;
     justify-content: center;
     animation: fadeIn 2s ease forwards;
+    z-index: -1;
 }
 
 
