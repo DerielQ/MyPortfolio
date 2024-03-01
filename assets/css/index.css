@@ -1,3 +1,5 @@
+@import url(header.css);
+
 html {
     box-sizing: border-box;
 }
@@ -8,7 +10,6 @@ body{
     margin: 0;
     padding-bottom: 40px;
     min-height: 100vh;
-
 }
 
 @font-face {
@@ -26,117 +27,16 @@ main {
 }
 
 /* Home Page */
-.header1{
-    padding: 5px 16px;
-    background: white;
-    box-shadow: 0 0 10px 0;
-    max-width: 100vw;
-    min-width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-/*header link*/
-.header1 a {
-    text-decoration: none;
-    color: black;
-}
-
-.header1 a:hover {
-    color: black;
-}
-
-
-.header2{
-    padding: 45px 16px;
-    background: white;
-    position: fixed;
-    top: 100;
-    right: 0;
-}
-
-.name{
-    font-size: 30px;
-    text-align: left;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    padding-top: 20px;
-    font-family:'montserrat';
-    font-weight: bold;
-    color: black;
-}
-
-.ndesc{
-    font-size: 18px;
-    text-align: left;
-    line-height: 20px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-weight: medium;
-    font-family: 'spacefont';
-    color: black;
-}
-
-.logo{
-    height: 100px;
-    width: 100px;
-    margin: 0;
-    float: left;
-}
-
-/*navigation*/
-.navi{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    z-index: 1;
-}
-
-nav li{
-    float: right;
-}
-
-nav li a{
-    padding: 20px;
-    text-decoration: none;
-    font-family: 'Gill Sans MT';
-}
-
-a.nav:link{
-    color: black;
-}
-
-a.nav:visited{
-    color: black;
-}
-
-a.nav:hover{
-    color: turquoise;
-}
-
-a.nav:active{
-    color: turquoise;
-}
-
 #mypic {
-    width: 80vw;
-    position: absolute;
+    width: 600px;
+    height: 665px;
+    position: fixed;
     top: 10%;
     z-index: -1;
     animation: slideInFromLeft 1s ease forwards;
     -webkit-user-drag: none;
     user-select: none;
-}
-
-@keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -154,12 +54,11 @@ a.nav:active{
 .rightwrap {
     display: flex;
     margin-right: 20vw;
-    animation: fadeIn 2s ease forwards;
-    
+    animation: fadeIn 2s ease forwards; 
 }
 
 .greet{
-    font-size: 6vw;
+    font-size: 6rem;
     color: black;
     font-family: 'spacefont';
     font-weight: bolder;
@@ -169,7 +68,7 @@ a.nav:active{
 }
 
 .greetcont{
-    font-size: 1.4vw;
+    font-size: 1.4rem;
     color: black;
     font-family: 'montserrat';
     line-height: 1.8;
@@ -178,26 +77,18 @@ a.nav:active{
     user-select: none;
 }
 
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-
 .btn{
     text-decoration: none;
     background-color: black;
     color: white;
     border-radius: 15px;
     overflow: hidden;
-    font-size: 18px;
+    font-size: 1.3rem;
     border: none;
     margin: 10px 30px 10px 0px;
-    padding: 15px 25px;
+    padding: 2vh 1.5vw;
     display: inline-block;
+    font-family: 'montserrat';
 }
 
 .greetcont a:link{
@@ -231,7 +122,7 @@ footer{
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-    background-color: white;
+    background-color: #1c1c1d;;
 }
 
 .botname{
@@ -241,4 +132,169 @@ footer{
     bottom: 0px;
     float: right;
     margin-right: 10px;
+    color: white;
+}
+
+
+
+
+/*Transitions*/
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+
+
+
+
+/*Responsive*/
+@media screen and (max-width: 1200px) {
+    .greet {
+        font-size: 5rem;
+    }
+
+    .greetcont {
+        font-size: 1rem;
+    }
+
+    .leftwrap {
+        width: 60vw;
+    }
+
+    .rightwrap {
+        margin-right: 10vw;
+    }
+
+    .wrapper {
+        padding-top: 25vh;
+    }
+}
+
+@media screen and (max-width: 1062px) {
+    .greet {
+        font-size: 4rem;
+    }
+
+    .greetcont {
+        font-size: 1rem;
+    }
+
+    .leftwrap {
+        width: 65vw;
+    }
+
+    .rightwrap {
+        margin-right: 5vw;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 901px) {
+    .greet {
+        font-size: 4rem;
+        margin-top: 20px;
+    }
+
+    .greetcont {
+        font-size: 1rem;
+        width: 500px
+    }
+
+    #mypic {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .wrapper {
+        padding: 0;
+        width: 100%;
+    }
+
+    .leftwrap {
+        width: 25vw;
+    }
+
+    .rightwrap div {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 662px) {
+    body {
+        min-height: 120vh;
+    }
+
+    .btn {
+        margin-right: 0;
+        display: block
+    }
+}
+
+@media screen and (max-width: 601px) {
+    body {
+        min-height: 180vh;
+    }
+
+    .btn {
+        margin-right: 0;
+        display: block
+    }
+
+    .leftwrap {
+        width: 25vw;
+    }
+
+    .greet {
+        font-size: 3.5rem;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    body {
+        min-height: 150vh;
+    }
+
+    #mypic {
+        width: 100%;
+        height: auto;
+        margin-top: 5rem;
+    }
+
+    .greet {
+        height: auto;
+        font-size: 2rem;
+    }
+
+    .greetcont {
+        height: auto;
+        min-width: 120px;
+    }
+
+    .leftwrap {
+        width: 25vw;
+    }
+
 }

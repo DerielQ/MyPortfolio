@@ -1,3 +1,6 @@
+@import url(header.css);
+@import url(footer.css);
+
 html {
     box-sizing: border-box;
     overflow-x: hidden;
@@ -8,17 +11,8 @@ body{
     position: relative;
     margin: 0;
     padding-bottom: 40px;
-    min-height: 120vh;
+    min-height: 125vh;
     overflow-x: hidden;
-}
-
-@keyframes slideFromRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
 }
 
 @font-face {
@@ -35,99 +29,6 @@ main {
     margin: 0;
 }
 
-/* Header wrap */
-.header1{
-    padding: 5px 16px;
-    background: white;
-    box-shadow: 0 0 10px 0;
-    max-width: 100%;
-    min-width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-/*header link*/
-.header1 a {
-    text-decoration: none;
-    color: black;
-}
-
-.header1 a:hover {
-    color: black;
-}
-
-.header2{
-    padding: 45px 16px;
-    background: white;
-    position: fixed;
-    top: 100;
-    right: 0;
-}
-
-.name{
-    font-size: 30px;
-    text-align: left;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    padding-top: 20px;
-    font-family:'montserrat';
-    font-weight: bold;
-    color: black;
-}
-
-.ndesc{
-    font-size: 18px;
-    text-align: left;
-    line-height: 20px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-weight: medium;
-    font-family: 'spacefont';
-    color: black;
-}
-
-.logo{
-    height: 100px;
-    width: 100px;
-    margin: 0;
-    float: left;
-}
-
-/*navigation*/
-.navi{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav li{
-    float: right;
-}
-
-nav li a{
-    padding: 20px;
-    text-decoration: none;
-    font-family: 'Gill Sans MT';
-}
-
-a.nav:link{
-    color: black;
-}
-
-a.nav:visited{
-    color: black;
-}
-
-a.nav:hover{
-    color: turquoise;
-}
-
-a.nav:active{
-    color: turquoise;
-}
-
 /*Slideshow*/
 #meimg {
     z-index: 2;
@@ -137,6 +38,7 @@ a.nav:active{
     padding: 5px;
     outline: 10px solid turquoise;
     outline-offset: 5px;
+    user-select: none;
 }
 
 .slideshow-container {
@@ -163,15 +65,6 @@ a.nav:active{
     animation-fill-mode: forwards; 
 }
 
-@keyframes fade {
-    from {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /*content*/
 .aboutheadwrap {
     width: 100vw;
@@ -195,7 +88,9 @@ a.nav:active{
     z-index: -2;
     position: absolute;
     right: 29.8vw;
-    top: 5vh;
+    top: 13rem;
+    height: 26.5rem;
+    width: 100%;
     animation: slideFromRight 2s ease forwards;
 }
 
@@ -211,6 +106,7 @@ a.nav:active{
     width: 64vw;
     top: 34.5vh;
     left: 2vw;
+    z-index: -1;
 }
 
 .aboutmetext {
@@ -220,18 +116,8 @@ a.nav:active{
     text-indent: 50px;
     text-align: justify;
     line-height: 3.8vh;
-    z-index: -1;
     user-select: none;
     animation: fadeIn 2s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .skillswrap {
@@ -254,21 +140,18 @@ a.nav:active{
     z-index: -1;
 }
 
+#containerwrap {
+    user-select: none;
+    display: inline;
+}
+
 .container {
     position: relative;
     display: inline-block;
     margin: 3.2vw;
     top: 70vh;
+    user-select: none;
     left: -100%;
-}
-
-@keyframes slideLeftVisible {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 0;
-    }
 }
 
 .container.slide-left {
@@ -282,6 +165,7 @@ a.nav:active{
     transition: filter 0.5s ease-in-out;
     cursor: pointer;
     -webkit-user-drag: none;
+    user-select: none;
 }
 
 .overchart {
@@ -294,6 +178,7 @@ a.nav:active{
     transition: opacity 0.5s ease-in-out;
     cursor: pointer;
     -webkit-user-drag: none;
+    user-select: none;
 }
 
 .container:hover .langimg {
@@ -305,9 +190,11 @@ a.nav:active{
 }
 
 #popimg {
-    width: 150px;
+    width: 100px;
     height: auto;
     cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 #popup-container {
@@ -315,7 +202,6 @@ a.nav:active{
     top: 65vh;
     right: -400px;
     transform: translateY(-50%);
-    padding: 2px;
     box-shadow: 0 0 10px #1C1C1D;
     transition: right 0.3s ease-in-out;
     z-index: 999;
@@ -323,38 +209,361 @@ a.nav:active{
     cursor: pointer;
     background-color: white;
     border: none;
-}
-
-.dialogue-bubble {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-width: 10px 0 10px 20px;
-    border-color: transparent transparent transparent #fff;
-    z-index: 1000;
-    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+    text-align: center;
 }
 
 #popup-container a {
     text-decoration: none;
 }
 
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-color: white;
+.poptext {
+    font-family: 'montserrat';
+    font-size: 14px;
+    margin: 10px;
 }
 
-.botname{
-    font-family: 'spacefont';
-    font-size: 14px;
-    text-align: right;
-    bottom: 0px;
-    float: right;
-    margin-right: 10px;
+
+
+
+/*Transitions*/
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideLeftVisible {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+}
+
+
+
+
+/*Responsive*/
+@media screen and (max-width: 1441px) {
+    body {
+        min-height: 125vh;
+    }
+
+    #bgimg {
+        top: 15rem;
+    }
+
+    #meimg {
+        width: 100%;
+        height: 26rem;
+    }
+
+    .mySlides {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        left: 64rem;
+        width: 23%;
+    }
+
+    .textwrap {
+        top: 17.5rem;
+    }
+
+    .skillswrap {
+        height: 0;
+        top: 35rem;
+    }
+
+    .container {
+        top: 35rem;
+    }
+
+    .langimg {
+        width: 140px;
+    }
+
+    .overchart {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #bgimg {
+        top: 11rem;
+        height: 21rem;
+    }
+
+    #meimg {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .mySlides {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        left: 45.5rem;
+        width: 23%;
+    }
+
+    .skillswrap {
+        top: 28rem;
+    }
+
+    .container {
+        top: 28rem;
+    }
+
+    .textwrap {
+        top: 13rem;
+    }
+
+    .langimg {
+        width: 100px;
+    }
+
+    .overchart {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    body {
+        min-height: 260vh;
+    }
+
+    #bgimg {
+        position: relative;
+        margin-top: 27rem;
+        height: 30rem;
+        width: 100%;
+        right: 0;
+    }
+
+    .aboutheadwrap {
+        width: 100vw;
+        display: block;
+        height: auto;
+        position: absolute;
+        top: 8rem;
+    }
+
+    .abouthead {
+        margin-top: 0;
+        font-size: 3rem;
+        z-index: -1;
+    }
+
+    .textwrap {
+        position: absolute;
+        width: 95%;
+        top: 42rem;
+        left: 2vw;
+    }
+    
+    .aboutmetext {
+        font-size: 3vw;
+        margin: 8px;
+    }
+
+    #meimg {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .mySlides {
+        display: block;
+        position: absolute;
+        top: -43.5rem;
+        left: 15rem;
+        width: 32%;
+    }
+
+    .skillswrap {
+        height: 20px;
+        position: absolute;
+        top: 75rem;
+    }
+    
+    .skillhead {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    .container {
+        top: 50vh;
+        margin-left: 5px;
+    }
+
+    .langimg {
+        width: 170px;
+        padding-left: 45px;
+    }
+
+    .overchart {
+        width: 170px;
+        padding-left: 43px;
+    }
+
+    #popup-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    body {
+        min-height: 290vh;
+    }
+
+    #bgimg {
+        position: relative;
+        margin-top: 28rem;
+        height: 35rem;
+        width: 100%;
+        right: 0;
+    }
+
+    .aboutheadwrap {
+        width: 100vw;
+        display: block;
+        height: auto;
+        position: absolute;
+        top: 8rem;
+    }
+
+    .abouthead {
+        margin-top: 0;
+        font-size: 3rem;
+        z-index: -1;
+    }
+
+    .textwrap {
+        position: absolute;
+        width: 95%;
+        top: 43rem;
+        left: 2vw;
+    }
+    
+    .aboutmetext {
+        font-size: 3.8vw;
+        margin: 8px;
+    }
+
+    #meimg {
+        width: 100%;
+        height: 52vh;
+    }
+
+    .mySlides {
+        display: block;
+        position: absolute;
+        top: -50rem;
+        left: 4.5rem;
+        width: 60%;
+    }
+
+    .skillswrap {
+        height: 20px;
+        position: absolute;
+        top: 75rem;
+    }
+    
+    .skillhead {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    .container {
+        top: 17rem;
+        margin-left: 5px;
+    }
+
+    .langimg {
+        padding-left: 35px;
+        width: 150px;
+    }
+
+    .overchart {
+        padding-left: 32px;
+        width: 150px;
+    }
+
+    #popup-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        min-height: 265vh;
+    }
+
+    .mySlides {
+        left: 2.5rem;
+        width: 70%;
+    }
+
+    .container {
+        top: 17rem;
+        margin-left: 18px;
+    }
+
+    .langimg {
+        padding-left: 37px;
+        width: 100px;
+    }
+
+    .overchart {
+        padding-left: 35px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 336px) {
+    body {
+        min-height: 255vh;
+    }
+
+    #meimg {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .mySlides {
+        top: -46rem;
+        left: 2rem;
+    }
+
+    .langimg {
+        padding-left: 35px;
+        width: 80px;
+    }
+
+    .overchart {
+        padding-left: 32px;
+        width: 80px;
+    }
 }

@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/Logo.png">
     <title>Deriel Edzel Quisao | Portfolio</title>
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="header1">
-            <a href="index.html">
-                <img class="logo" src="assets/imgs/Logo.png" alt="logo">
-                <h1 class="name">Deriel Edzel Quisao</h1>
-                <h2 class="ndesc">JUNIOR DEVELOPER</h2>
-            </a>
+            <div class="top">
+                <a href="index.html">
+                    <img class="logo" src="assets/imgs/Logo.png" alt="logo">
+                    <h1 class="name">Deriel Edzel Quisao</h1>
+                    <h2 class="ndesc">JUNIOR DEVELOPER</h2>
+                </a>
+            </div>
         </div>
         <div class="header2">
             <nav>
-                <ul class="navi">
+                <ul class="navi" id="myTopnav">
                     <li><a class="nav" href="contact.html">CONTACT</a></li>
-                    <li><a class="nav" href="works.html">WORKS</a></li>
+                    <li><a class="nav" href="projects.html">PROJECTS</a></li>
                     <li><a class="nav" href="about_me.html">ABOUT ME</a></li>
                     <li><a class="nav" href="index.html">HOME</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                        <img src="assets/imgs/barmenu.png">
+                    </a>
                 </ul>
             </nav>
-        </div>
-    </header>    
+            <div id="sidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <img src="assets/imgs/close.png">
+                </a>
+                <div class="sidelinks">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about_me.html">ABOUT ME</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </header>
+        
 
     <main class="fade-out">
         <!-- Hero Section -->
@@ -59,5 +79,7 @@
             <p class="botname">2024 | Deriel Quisao | Online Portfolio</p>
         </div>
     </footer>
+
+    <script src="assets/js/responsive.js"></script>
 </body>
 </html>

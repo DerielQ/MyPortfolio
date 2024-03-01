@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/about_me.css">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/Logo.png">
     <title>Deriel Edzel Quisao | Portfolio</title>
 </head>
 <body>
@@ -18,14 +19,30 @@
         </div>
         <div class="header2">
             <nav>
-                <ul class="navi">
+                <ul class="navi" id="myTopnav">
                     <li><a class="nav" href="contact.html">CONTACT</a></li>
-                    <li><a class="nav" href="works.html">WORKS</a></li>
+                    <li><a class="nav" href="projects.html">PROJECTS</a></li>
                     <li><a class="nav" href="about_me.html">ABOUT ME</a></li>
                     <li><a class="nav" href="index.html">HOME</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                        <img src="assets/imgs/barmenu.png">
+                    </a>
                 </ul>
             </nav>
-        </div>
+            <div id="sidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <img src="assets/imgs/close.png">
+                </a>
+                <div class="sidelinks">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about_me.html">ABOUT ME</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+              </div>
+        </div>  
     </header>
 
     <main>
@@ -34,6 +51,15 @@
         <!-- About Me Content -->
         <div class="aboutheadwrap">
             <h1 class="abouthead">About Me</h1>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="assets/imgs/me 1.png" id="meimg">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="assets/imgs/me 2.png" id="meimg">
+            </div>
         </div>
         <div class="textwrap">
             <p class="aboutmetext">
@@ -51,19 +77,10 @@
                 passion for innovation and creativity. Let's join forces and build something remarkable together!
             </p>
         </div>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="assets/imgs/me 1.png" id="meimg">
-            </div>
-        
-            <div class="mySlides fade">
-                <img src="assets/imgs/me 2.png" id="meimg">
-            </div>
-        </div>
         <div class="skillswrap">
             <h1 class="skillhead">▼ Skills ▼</h1>
         </div>
-        <div>
+        <div id="containerwrap">
             <div class="container">
                 <img class="langimg" src="assets/imgs/py.png" alt="Python">
                 <img class="overchart" src="assets/imgs/pychart.png" alt="Python Skills">
@@ -92,19 +109,21 @@
 
         <div id="popup-container">
             <a href="contact.html">
-                <div class="dialogue-bubble"></div>
-                <img id="popimg" src="assets/imgs/mepop.png" alt="Popup Image" width="300">
-                <p class="ndesc">&nbsp;&nbsp;► &nbsp;&nbsp;Let's Talk?</p>
+                <img id="popimg" src="assets/imgs/mepop.png" alt="Popup Image">
+                <p class="poptext">► Let's Talk?</p>
             </a>
         </div>
     </main>
 
     <footer>
         <div>
+            <a class="footerdl" href="Deriel Quisao Resume.pdf" download="Deriel Edzel Quisao Resume"
+            target="_blank">Download Résumé</a>
             <p class="botname">2024 | Deriel Quisao | Online Portfolio</p>
         </div>
     </footer>
     
     <script src="assets/js/about_me.js"></script>
+    <script src="assets/js/responsive.js"></script>
 </body>
 </html>

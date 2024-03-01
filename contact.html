@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/Logo.png">
     <title>Deriel Edzel Quisao | Portfolio</title>
 </head>
 <body>
@@ -18,14 +19,31 @@
         </div>
         <div class="header2">
             <nav>
-                <ul class="navi">
+                <ul class="navi" id="myTopnav">
                     <li><a class="nav" href="contact.html">CONTACT</a></li>
-                    <li><a class="nav" href="works.html">WORKS</a></li>
+                    <li><a class="nav" href="projects.html">PROJECTS</a></li>
                     <li><a class="nav" href="about_me.html">ABOUT ME</a></li>
                     <li><a class="nav" href="index.html">HOME</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                        <img src="assets/imgs/barmenu.png">
+                    </a>
                 </ul>
             </nav>
-        </div>
+            <div id="sidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <img src="assets/imgs/close.png">
+                </a>
+                <div class="sidelinks">
+                    <div class="sidelinks">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="about_me.html">ABOUT ME</a></li>
+                            <li><a href="projects.html">PROJECTS</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+              </div>
+        </div>  
     </header>
     
     <main>
@@ -35,18 +53,42 @@
 
         <div class="formwrap">
             <div class="leftwrap">
-                <form id="contactForm" action="https://formspree.io/f/mpzvdjqk" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/mpzvdjqk" method="POST" target="_blank">
                     <span>▼ Full Name ▼</span>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required>
                     <span>▼ Email Address ▼</span>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                     <span>▼ Message ▼</span>
-                    <textarea name="message" id="message" cols="30" rows="10" spellcheck="false"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" spellcheck="false" required></textarea>
                     <button type="submit" class="submit_btn">Send Message</button>
                 </form>
             </div>
             <div class="rightwrap">
-
+                <p>Alternatively, you can reach me if you:</p>
+                <div>
+                    <a href="https://www.facebook.com/imagineitsblank">
+                        <img src="assets/imgs/facebook.png">
+                        <span>
+                            Like me on Facebook
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="mailto:quisaoderieledzel@gmail.com">
+                        <img src="assets/imgs/gmail.png">
+                        <span>
+                            Message me on Gmail
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="mailto:derieledzelquisao@yahoo.com">
+                        <img src="assets/imgs/yahoo.png">
+                        <span>
+                            Message me on Yahoo
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -54,8 +96,12 @@
 
     <footer>
         <div>
+            <a class="footerdl" href="Deriel Quisao Resume.pdf" download="Deriel Edzel Quisao Resume"
+            target="_blank">Download Résumé</a>
             <p class="botname">2024 | Deriel Quisao | Online Portfolio</p>
         </div>
     </footer>
+
+    <script src="assets/js/responsive.js"></script>
 </body>
 </html>
