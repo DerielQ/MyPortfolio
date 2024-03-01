@@ -1,0 +1,318 @@
+@import url(header.css);
+@import url(footer.css);
+
+html {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    position: relative;
+    margin: 0;
+    padding-bottom: 40px;
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: spacefont;
+    src: url(fonts/SpaceGrotesk.ttf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/Montserrat.ttf);
+}
+
+main {
+    margin: 0;
+}
+
+.projhead {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-family: 'spacefont';
+    font-size: 3vw;
+    user-select: none;
+    animation: fadeIn 2s ease forwards;
+    z-index: -1;
+}
+
+.wrapper {
+    padding-top: 8rem;
+}
+
+.projects img {
+    width: 100%;
+    border: 10px solid #1C1C1D;
+    padding: 5px;
+    outline: 10px solid turquoise;
+    outline-offset: 5px;
+    margin-bottom: 10vh;
+    animation: fadeIn 2s ease forwards;
+}
+
+.projects {
+    display: flex;
+    margin: 0 5vw;
+    justify-content: center;
+}
+
+.projcards {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding: 0 5vw;
+}
+
+.intro {
+    text-align: center;
+    font-family: 'montserrat';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 36vw;
+    height: 38vh;
+    user-select: none;
+}
+
+.projcards:hover .intro {
+    opacity: 1;
+}
+
+.intro h2 {
+    font-family: 'spacefont';
+}
+
+.projects a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin:  0.5vw
+}
+
+.projects a:hover {
+    background-color: turquoise;
+}
+
+.projects a:active {
+    background-color: rgb(177, 254, 247);
+}
+
+#popimg {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+#popup-container {
+    position: fixed;
+    top: 65vh;
+    right: -400px;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px #1C1C1D;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    text-align: center;
+}
+
+#popup-container a {
+    text-decoration: none;
+}
+
+.poptext {
+    font-family: 'montserrat';
+    font-size: 14px;
+    margin: 10px;
+}
+
+
+
+/*Transitions*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/*Responsive*/
+@media screen and (max-width: 1441px) {
+    .projhead {
+        font-size: 3.5rem;
+    }
+
+    .intro {
+        width: 33rem;
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .projhead {
+        font-size: 3rem;
+    }
+
+    .intro {
+        width: 24rem;
+        height: 12.5rem;
+        padding: 0 5px;
+    }
+
+    .intro h2{
+        font-size: 2.5vw;
+    }
+
+    .intro p {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .projhead {
+        font-size: 3rem;
+    }
+
+    .projects {
+        display: block;
+    }
+
+    .projcards {
+        width: 35rem;
+        padding: 0 3rem;
+    }
+
+    .intro {
+        width: 36.5rem;
+        height: 18.5rem;
+        padding: 0 10px;
+    }
+
+    .intro h2{
+        font-size: 4vw;
+    }
+
+    .intro p {
+        font-size: 2vw;
+    }
+
+    #popup-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .projhead {
+        font-size: 3rem;
+    }
+
+    .projects {
+        display: block;
+        margin: 0;
+    }
+
+    .projcards {
+        width: 20rem;
+        padding: 0 2.3rem;
+        height: 20rem;
+    }
+
+    .projcards img {
+        height: 100%;
+    }
+
+    .intro {
+        width: 22rem;
+        height: 16rem;
+        padding: 0 10px;
+    }
+
+    .intro h2{
+        font-size: 5vw;
+    }
+
+    .intro p {
+        font-size: 3vw;
+    }
+
+    #popup-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .projhead {
+        font-size: 3rem;
+    }
+
+    .projects {
+        display: block;
+        margin: 0;
+    }
+
+    .projcards {
+        width: 18rem;
+        padding: 0 2rem;
+        height: 20rem;
+    }
+
+    .projcards img {
+        height: 100%;
+    }
+
+    .intro {
+        width: 20rem;
+        height: 16rem;
+        padding: 0 10px;
+    }
+
+    .intro h2{
+        font-size: 5vw;
+    }
+
+    .intro p {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 336px) {
+    .projcards {
+        width: 15rem;
+        padding: 0 1.5rem;
+        height: 20rem;
+    }
+
+    .intro {
+        width: 17rem;
+        height: 16rem;
+        padding: 0 10px;
+    }
+
+    .intro h2{
+        font-size: 6vw;
+    }
+
+    .intro p {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,195 @@
+.header1{
+    padding: 5px 16px;
+    background: white;
+    box-shadow: 0 0 10px 0;
+    max-width: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/*header link*/
+.header1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.header1 a:hover {
+    color: black;
+}
+
+.top {
+    max-width: 27rem;
+}
+
+.header2{
+    padding: 45px 16px;
+    background-color: transparent;
+    position: fixed;
+    top: 100;
+    right: 0;
+    z-index: 999;
+}
+
+.name{
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 20px;
+    font-family:'montserrat';
+    font-weight: bold;
+    color: black;
+}
+
+.ndesc{
+    font-size: 20px;
+    text-align: left;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: medium;
+    font-family: 'spacefont';
+    color: black;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    float: left;
+}
+
+/*navigation*/
+.navi{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li{
+    float: right;
+}
+
+nav li a{
+    padding: 20px;
+    text-decoration: none;
+    font-family: 'Gill Sans MT';
+}
+
+a.nav:link{
+    color: black;
+}
+
+a.nav:visited{
+    color: black;
+}
+
+a.nav:hover{
+    color: turquoise;
+}
+
+a.nav:active{
+    color: turquoise;
+}
+
+.navi .icon {
+    display: none;
+}
+
+.icon img {
+    width: 50px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #1c1c1d;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+  color: white;
+  font-family: 'spacefont';
+}
+
+.sidenav ul {
+    list-style-type: none;
+}
+
+.sidenav a:hover {
+  color: turquoise;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+
+.closebtn img{
+    padding: 20px;
+}
+
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+    .navi a {
+    display: none;
+    }
+    .navi a.icon {
+    float: right;
+    display: block;
+    }
+    .header2 {
+        padding: 30px 16px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .navi.responsive {
+        position: relative;
+    }
+    .navi.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navi.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .name {
+        font-size: 1.5rem;
+        padding-top: 25px;
+    }
+
+    .ndesc {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .name, .ndesc {
+        display: none;
+    }
+}
